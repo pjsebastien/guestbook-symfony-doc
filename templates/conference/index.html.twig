@@ -1,7 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ConferenceController!{% endblock %}
+{% block title %}Liste des conférences{% endblock %}
 
 {% block body %}
+
+<h2>Donnez votre avis sur la conférences</h2>
+
+{% for conference in conferences %}
+
+<h4>{{ conference }}</h4>
+<a href="{{ path('conference', { id: conference.id }) }}">Voir..</a>
+
+    
+{% endfor %}
 
 {% endblock %}
